@@ -8,6 +8,9 @@ struct tags{
   char album[252];
   char date[20];
   char genre[20];
-  unsigned long duration;
-  struct tags *next = NULL;
+  char path[100];
+  int duration;
 };
+
+struct tags *make_tag();
+struct tags *read_file_info(struct tags *mp3, char *filename);
